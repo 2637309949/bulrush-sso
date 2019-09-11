@@ -1,0 +1,3 @@
+name: 'bulrush-sso'
+port: ':8081'
+prefix: '/'

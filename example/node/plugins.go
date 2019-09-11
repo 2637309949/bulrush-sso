@@ -5,25 +5,15 @@
 package main
 
 import (
-	"html/template"
-	"path"
-
 	"github.com/2637309949/bulrush"
-	delivery "github.com/2637309949/bulrush-delivery"
 	identify "github.com/2637309949/bulrush-identify"
 	sso "github.com/2637309949/bulrush-sso"
-	gintemplate "github.com/foolin/gin-template"
+	"github.com/2637309949/bulrush-template/addition"
 	"github.com/gin-gonic/gin"
 )
 
 // SSO server plugins
-var SSO = &sso.Server{}
-
-// Delivery Upload, Logger, Captcha Plugin init
-var Delivery = delivery.New().Init(func(d *delivery.Delivery) {
-	d.URLPrefix = "/assets"
-	d.Path = path.Join("../../public/", "")
-})
+var SSO = &sso.Client{}
 
 // Identify plugin init
 var Identify = identify.
@@ -31,7 +21,7 @@ var Identify = identify.
 	AddOptions(identify.FakeURLsOption([]string{`^/api/ignore$`, `^/api/gorm/mock`})).
 	AddOptions(identify.FakeTokensOption([]string{})).
 	AddOptions(identify.ModelOption(&identify.RedisModel{
-		Redis: Redis,
+		Redis: addition.Redis,
 	})).
 	Init(func(iden *identify.Identify) {
 		iden.AddOptions(
@@ -55,18 +45,7 @@ var Identify = identify.
 	})
 
 func addPlugin(app bulrush.Bulrush) bulrush.Bulrush {
-	app.Use(Delivery)
-	app.Use(func(httpProxy *gin.Engine, router *gin.RouterGroup) {
-		httpProxy.HTMLRender = gintemplate.New(gintemplate.TemplateConfig{
-			Root:         "../../template",
-			Extension:    ".html",
-			Master:       "layout",
-			Partials:     []string{},
-			Funcs:        template.FuncMap{},
-			DisableCache: true,
-		})
-	})
-	app.Use(Identify)
 	app.Use(SSO)
+	app.Use(Identify)
 	return app
 }

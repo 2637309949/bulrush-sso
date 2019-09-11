@@ -6,9 +6,12 @@ require (
 	github.com/2637309949/bulrush v0.0.0-20190904151601-2d79a67959e6
 	github.com/2637309949/bulrush-addition v0.0.0-20190831034018-427428781eb0
 	github.com/2637309949/bulrush-delivery v0.0.0-20190805055946-c208fdca9d47
+	github.com/2637309949/bulrush-identify v0.0.0-20190831033932-28c237c53adf
 	github.com/2637309949/bulrush-sso v0.0.0-20190911051105-087e987772de
+	github.com/2637309949/bulrush-template v0.0.0-20190831034000-f9696cde578d
 	github.com/foolin/gin-template v0.0.0-20190415034731-41efedfb393b
 	github.com/gin-gonic/gin v1.4.0
+	github.com/go-redis/redis v6.15.2+incompatible
 	github.com/kataras/go-events v0.0.2
 	github.com/michelloworld/ez-gin-template v0.0.0-20171028145326-7d77b0197797
 )

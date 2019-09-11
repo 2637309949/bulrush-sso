@@ -1,7 +1,6 @@
 {{ define "content" }}
 <link href="assets/css/login.css" rel="stylesheet" />
 <script src="assets/js/login.js"></script>
-
 <div class="login-page-containter">
 	<div class="login-page">
 		<!-- <% if (locals.message) { %>
@@ -11,7 +10,7 @@
 			<form class="register-form" action="/register" method="POST">
 				<input type="text" placeholder="username" name="username" />
 				<input type="password" placeholder="password" name="password" />
-				<input type="text" placeholder="email address" />
+				<input type="text" placeholder="email address" name="email"/>
 				<button>create</button>
 				<p class="message">Already registered? <a href="#">Sign In</a></p>
 			</form>
