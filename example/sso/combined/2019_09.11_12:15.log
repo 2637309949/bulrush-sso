@@ -1,0 +1,579 @@
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func() *gin.Engine
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:106: 2019/09/11 - 12:15:56 panic recovered:
+inputsFrom *bulrush.Config call with *bulrush.Injects error
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:106: 2019/09/11 - 12:15:56 panic recovered:
+inputsFrom *gin.RouterGroup call with *bulrush.Injects error
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:106: 2019/09/11 - 12:15:56 panic recovered:
+inputsFrom *gin.RouterGroup call with *bulrush.Injects error
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:15:56 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:16: EventsRunning [BULRUSH::562949953421313]
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/11 12:15:56 /home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:106: 2019/09/11 - 12:15:56 panic recovered:
+inputsFrom *bulrush.Config call with *bulrush.Injects error
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/.gvm/pkgsets/go1.13/global/pkg/mod/github.com/2637309949/bulrush@v0.0.0-20190904151601-2d79a67959e6/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/errors.go:106: 2019/09/11 - 12:36:52 panic recovered:
+inputsFrom *bulrush.Config call with *bulrush.Injects error
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/errors.go:106: 2019/09/11 - 12:36:52 panic recovered:
+inputsFrom *gin.RouterGroup call with *bulrush.Injects error
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/errors.go:106: 2019/09/11 - 12:36:52 panic recovered:
+inputsFrom *gin.RouterGroup call with *bulrush.Injects error
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:16: EventsRunning [BULRUSH::562949953421313]
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/11 12:36:52 /home/double/work/K11/repo/bulrush/bulrush/errors.go:106: 2019/09/11 - 12:36:52 panic recovered:
+inputsFrom *bulrush.Config call with *bulrush.Injects error
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:81 (0x93b755)
+	(*Scope).inFrom: panic(fmt.Errorf("inputsFrom %v call with %v error", ptype, reflect.TypeOf(inputs)))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:38 (0x93eeb2)
+	(*executor).traverse.func1.1: pv.inFrom(exec.injects)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:17: EventsRunning [BULRUSH::562949953421313]
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/11 12:41:24 /home/double/work/K11/repo/bulrush/bulrush/errors.go:106: 2019/09/11 - 12:41:24 panic recovered:
+runtime error: slice bounds out of range [:1] with length 0
+/home/double/.gvm/gos/go1.13/src/runtime/panic.go:85 (0x42d962)
+	goPanicSliceAlen: panic(boundsError{x: int64(x), signed: true, y: y, code: boundsSliceAlen})
+/home/double/work/K11/repo/bulrush/bulrush/utils.go:16 (0x93d276)
+	fixedPortPrefix: if prefix := port[:1]; prefix != ":" {
+/home/double/work/K11/repo/bulrush/bulrush/plugins.go:199 (0x93ce4b)
+	glob..func6: addr := fixedPortPrefix(strings.TrimSpace(config.Port))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:45 (0x93af96)
+	(*Scope).reflectCall: return funk.Map(m.Call(ins), func(v reflect.Value) interface{} {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:40 (0x93ef5b)
+	(*executor).traverse.func1.1: exec.inspect(pv.reflectCall(pv.indirectPlugin(), pv.Inputs)...)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f0d9)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93dd84)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93dd39)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93df85)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93df21)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:17: EventsRunning [BULRUSH::562949953421313]
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/11 12:42:40 /home/double/work/K11/repo/bulrush/bulrush/errors.go:106: 2019/09/11 - 12:42:40 panic recovered:
+runtime error: slice bounds out of range [:1] with length 0
+/home/double/.gvm/gos/go1.13/src/runtime/panic.go:85 (0x42d962)
+	goPanicSliceAlen: panic(boundsError{x: int64(x), signed: true, y: y, code: boundsSliceAlen})
+/home/double/work/K11/repo/bulrush/bulrush/utils.go:16 (0x93d2f8)
+	fixedPortPrefix: if prefix := port[:1]; prefix != ":" {
+/home/double/work/K11/repo/bulrush/bulrush/plugins.go:200 (0x93cecd)
+	glob..func6: addr := fixedPortPrefix(strings.TrimSpace(config.Port))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:45 (0x93af96)
+	(*Scope).reflectCall: return funk.Map(m.Call(ins), func(v reflect.Value) interface{} {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:40 (0x93efdb)
+	(*executor).traverse.func1.1: exec.inspect(pv.reflectCall(pv.indirectPlugin(), pv.Inputs)...)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f159)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x9383ac)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938473)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x93854b)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93de04)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93ddb9)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:111 (0x938173)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93e005)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93dfa1)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:17: EventsRunning [BULRUSH::562949953421313]
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/11 12:47:10 /home/double/work/K11/repo/bulrush/bulrush/errors.go:108: 2019/09/11 - 12:47:10 panic recovered:
+runtime error: slice bounds out of range [:1] with length 0
+/home/double/.gvm/gos/go1.13/src/runtime/panic.go:85 (0x42d962)
+	goPanicSliceAlen: panic(boundsError{x: int64(x), signed: true, y: y, code: boundsSliceAlen})
+/home/double/work/K11/repo/bulrush/bulrush/utils.go:16 (0x93d226)
+	fixedPortPrefix: if prefix := port[:1]; prefix != ":" {
+/home/double/work/K11/repo/bulrush/bulrush/plugins.go:199 (0x93cdfb)
+	glob..func6: addr := fixedPortPrefix(strings.TrimSpace(config.Port))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/scope.go:45 (0x93af46)
+	(*Scope).reflectCall: return funk.Map(m.Call(ins), func(v reflect.Value) interface{} {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:40 (0x93ef0b)
+	(*executor).traverse.func1.1: exec.inspect(pv.reflectCall(pv.indirectPlugin(), pv.Inputs)...)
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:113 (0x938123)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:36 (0x93f089)
+	(*executor).traverse.func1: return CatchError(func() {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:24 (0x93835c)
+	(*executor).next: errs = append(errs, in((*exec.scopes)[i]))
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:26 (0x938423)
+	(*executor).next: exec.next(in, i)
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:35 (0x9384fb)
+	(*executor).traverse: return exec.next(func(pv Scope) error {
+/home/double/work/K11/repo/bulrush/bulrush/executor.go:50 (0x93dd34)
+	(*executor).execute: exec.traverse()
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:277 (0x93dce9)
+	(*rush).ExecWithBooting.func1.1: exec.execute(func(ret ...interface{}) {
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:460 (0x490a75)
+	Value.call: call(frametype, fn, args, uint32(frametype.size), uint32(retOffset))
+/home/double/.gvm/gos/go1.13/src/reflect/value.go:321 (0x490233)
+	Value.Call: return v.call("Call", in)
+/home/double/work/K11/repo/bulrush/bulrush/errors.go:113 (0x938123)
+	CatchError: reflect.ValueOf(funk).Call([]reflect.Value{})
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:218 (0x93df35)
+	(*rush).CatchError: return CatchError(funk)
+/home/double/work/K11/repo/bulrush/bulrush/bulrush.go:266 (0x93ded1)
+	(*rush).ExecWithBooting.func1: err = bul.CatchError(func() {
+/home/double/.gvm/gos/go1.13/src/runtime/asm_amd64.s:1357 (0x45be10)
+	goexit: BYTE	$0x90	// NOP
+[0m
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:17: EventsRunning [BULRUSH::562949953421313]
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:201: ================================
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:202: App: bulrush-sso
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:203: Listen on :8080
+2019/09/11 12:47:50 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:204: ================================
