@@ -1,0 +1,30 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #292931;
+    background: url(../image/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.toast-info {
+    background-color: #FFF;
+    padding: 10px;
+}
+
+.toast-error {
+    background-color: #FFF;
+    color: #F00;
+    padding: 10px;
+}

@@ -5,6 +5,8 @@
 package sso
 
 import (
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -19,7 +21,12 @@ type (
 
 // Plugin defined bulrush plugin
 func (s *Server) Plugin(router *gin.RouterGroup) {
-
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index", "")
+	})
+	router.GET("/login", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "pages/login", "")
+	})
 }
 
 // Plugin defined bulrush plugin

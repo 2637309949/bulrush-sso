@@ -1,6 +1,3 @@
 name: 'bulrush-sso'
 port: ':8080'
-prefix: '/api'
-mode: 'debug'
-logs:
-  path: '/logs'
+prefix: '/'
