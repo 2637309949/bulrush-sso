@@ -1,6 +1,6 @@
 ![sso flash](./assert/20190910124926.png)
 
-This plugin has been merged to bulrush-identify
+This plugin must be dependon bulrush-identify
 
 ## bulrush-sso
 	Lightweight sso for Internal security network
