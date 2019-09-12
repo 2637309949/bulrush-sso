@@ -17,7 +17,16 @@ import (
 )
 
 // SSO server plugins
-var SSO = &sso.Server{}
+var SSO = (&sso.Server{}).Init(func(s *sso.Server) {
+	// User Register
+	s.Register = func(*gin.Context, struct {
+		UserName string
+		Password string
+		Email    string
+	}) error {
+		return nil
+	}
+})
 
 // Delivery Upload, Logger, Captcha Plugin init
 var Delivery = delivery.New().Init(func(d *delivery.Delivery) {
