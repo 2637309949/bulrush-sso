@@ -5,8 +5,11 @@
 package main
 
 import (
+	"errors"
 	"html/template"
 	"path"
+
+	"github.com/thoas/go-funk"
 
 	"github.com/2637309949/bulrush"
 	delivery "github.com/2637309949/bulrush-delivery"
@@ -16,14 +19,40 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+var users = []struct {
+	UserName string
+	Password string
+	Email    string
+}{
+	struct {
+		UserName string
+		Password string
+		Email    string
+	}{
+		UserName: "root",
+		Password: "111111",
+	},
+}
+
 // SSO server plugins
 var SSO = (&sso.Server{}).Init(func(s *sso.Server) {
 	// User Register
-	s.Register = func(*gin.Context, struct {
+	s.Register = func(c *gin.Context, info struct {
 		UserName string
 		Password string
 		Email    string
 	}) error {
+		one := funk.Find(users, func(u struct {
+			UserName string
+			Password string
+			Email    string
+		}) bool {
+			return u.UserName == info.UserName && u.Password == info.Password
+		})
+		if one != nil {
+			return errors.New("user has existed")
+		}
+		users = append(users, info)
 		return nil
 	}
 })
@@ -45,20 +74,27 @@ var Identify = identify.
 	Init(func(iden *identify.Identify) {
 		iden.AddOptions(
 			identify.AuthOption(func(ctx *gin.Context) (interface{}, error) {
-				var user interface{}
+				var err error
 				form := struct {
 					UserName string `form:"username" json:"username" xml:"username" binding:"required"`
 					Password string `form:"password" json:"password" xml:"password" binding:"required"`
 				}{}
-				if err := ctx.ShouldBind(&form); err != nil {
+				if err = ctx.ShouldBind(&form); err != nil {
 					return nil, err
 				}
-				if form.UserName == "root" && form.Password == "111111" {
+				one := funk.Find(users, func(u struct {
+					UserName string
+					Password string
+					Email    string
+				}) bool {
+					return u.UserName == form.UserName && u.Password == form.Password
+				})
+				if one != nil {
 					return map[string]string{
 						"username": form.UserName,
 					}, nil
 				}
-				return user, nil
+				return errors.New("User does not exist or password does not match"), nil
 			}),
 		)
 	})

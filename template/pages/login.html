@@ -3,9 +3,9 @@
 <script src="assets/js/login.js"></script>
 <div class="login-page-containter">
 	<div class="login-page">
-		<!-- <% if (locals.message) { %>
-		<div class="toast-error"><%= message %></div>
-		<% } %> -->
+		{{if .message}}
+		<div class="toast-error">{{.message}}</div>
+		{{end}}
 		<div class="form">
 			<form class="register-form" action="/register" method="POST">
 				<input type="text" placeholder="username" name="username" />
@@ -14,7 +14,7 @@
 				<button>create</button>
 				<p class="message">Already registered? <a href="#">Sign In</a></p>
 			</form>
-			<form class="login-form" action="<%= action %>" method="POST">
+			<form class="login-form" action="{{.action}}" method="POST">
 				<input type="text" placeholder="username" name="username" />
 				<input type="password" placeholder="password" name="password" />
 				<button>login</button>

@@ -14,6 +14,7 @@ require (
 	github.com/go-redis/redis v6.15.2+incompatible
 	github.com/kataras/go-events v0.0.2
 	github.com/michelloworld/ez-gin-template v0.0.0-20171028145326-7d77b0197797
+	github.com/thoas/go-funk v0.4.0
 )
 
 // ## just for dev

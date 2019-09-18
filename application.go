@@ -97,9 +97,10 @@ func (s *Server) Plugin(router *gin.RouterGroup, iden *identify.Identify) {
 					} else {
 						c.Redirect(http.StatusMovedPermanently, redirect+"?accessToken="+info.AccessToken)
 					}
-				} else {
-					c.Redirect(http.StatusMovedPermanently, s.Route["home"])
+					return
 				}
+				c.Redirect(http.StatusMovedPermanently, s.Route["home"])
+				return
 			}
 		}
 		if err != nil && message == "" {
@@ -112,6 +113,12 @@ func (s *Server) Plugin(router *gin.RouterGroup, iden *identify.Identify) {
 
 	// logou route
 	router.GET(utils.Some(s.Route["logout"], "/logout").(string), func(c *gin.Context) {
+		token := iden.GetToken(c)
+		iden.Model.Revoke(token)
+		c.SetCookie("accessToken", "", 0, "/", "", false, true)
+		redirect := utils.Some(c.Query("redirect_uri"), c.Query("redirect")).(string)
+		redirect = utils.Some(redirect, s.Route["home"]).(string)
+		c.Redirect(http.StatusMovedPermanently, redirect)
 	})
 
 	// register route

@@ -1562,3 +1562,75 @@ handlers are already registered for path '/login'
 2019/09/11 19:39:09 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:202: App: bulrush-sso
 2019/09/11 19:39:09 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:203: Listen on :8080
 2019/09/11 19:39:09 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:204: ================================
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush-addition/redis/redis.go:35: redis:Connection has been established successfully, URL:127.0.0.1:6379
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*delivery.Delivery
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*identify.Identify
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*sso.Server
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:18: EventsRunning [BULRUSH::562949953421313]
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:201: ================================
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:202: App: bulrush-sso
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:203: Listen on :8080
+2019/09/12 17:56:29 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:204: ================================
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush-addition/redis/redis.go:35: redis:Connection has been established successfully, URL:127.0.0.1:6379
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*delivery.Delivery
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*identify.Identify
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*sso.Server
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:18: EventsRunning [BULRUSH::562949953421313]
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:201: ================================
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:202: App: bulrush-sso
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:203: Listen on :8080
+2019/09/12 18:03:26 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:204: ================================
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush-addition/redis/redis.go:35: redis:Connection has been established successfully, URL:127.0.0.1:6379
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*delivery.Delivery
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*identify.Identify
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*sso.Server
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:18: EventsRunning [BULRUSH::562949953421313]
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:201: ================================
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:202: App: bulrush-sso
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:203: Listen on :8080
+2019/09/12 18:06:02 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:204: ================================
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush-addition/redis/redis.go:35: redis:Connection has been established successfully, URL:127.0.0.1:6379
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func() *gin.Engine
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *bulrush.Config) *gin.RouterGroup
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.RouterGroup, *gin.Engine)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*delivery.Delivery
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, *gin.RouterGroup)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*identify.Identify
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:*sso.Server
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(events.EventEmmiter)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush-sso/example/sso/main.go:18: EventsRunning [BULRUSH::562949953421313]
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/debug.go:22: next plugin:func(*gin.Engine, events.EventEmmiter, *bulrush.Config)
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:201: ================================
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:202: App: bulrush-sso
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:203: Listen on :8080
+2019/09/12 18:35:35 /home/double/work/K11/repo/bulrush/bulrush/plugins.go:204: ================================
